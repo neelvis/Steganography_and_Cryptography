@@ -1,0 +1,10 @@
+# Project exclude paths
+/.gradle/
+/Steganography and Cryptography/task/build/
+/Topics/Lambda expressions/"Not" predicate/build/
+/Topics/Lambda expressions/Function composition/build/
+/Topics/Lambda expressions/Max/build/
+/Topics/Lambda expressions/Range multiplication/build/
+/Topics/Lambda expressions/Theory/build/
+/Topics/Writing files/Closed case/build/
+/Topics/Writing files/Theory/build/
