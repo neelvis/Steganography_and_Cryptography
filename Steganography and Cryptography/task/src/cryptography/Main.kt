@@ -9,11 +9,6 @@ import java.io.IOException
 const val stringEOS = "000000000000000000000011"
 
 fun main() {
-    val ch = List(4) { readLine()!![0].toChar() }
-
-    ch.forEach { println(it - 1) }
-}
-fun nemain() {
     do {
         when (val choice = menu()) {
             "exit" -> { println("Bye!"); break }
@@ -39,13 +34,11 @@ fun Byte.to8bits(radix: Int): String {
 
 fun setBlueBit(color: Color, bit: Int): Int {
     // apply bit mask to a color to set least significant bit
-    var newColor = 0
-    if (color.blue % 2 == 0) {
-        newColor = Color(color.red, color.green, color.blue.or(bit)).rgb
+    return if (color.blue % 2 == 0) {
+        Color(color.red, color.green, color.blue.or(bit)).rgb
     } else {
-        newColor = Color(color.red, color.green, color.blue.and(254 + bit)).rgb
+        Color(color.red, color.green, color.blue.and(254 + bit)).rgb
     }
-    return newColor
 }
 
 fun encrypt(message: ByteArray, password: ByteArray): String {
